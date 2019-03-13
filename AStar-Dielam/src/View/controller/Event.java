@@ -6,12 +6,12 @@
 package View.controller;
 
 /**
- *
+ * Events
  * @author Diego Laguna Martín
  */
 public class Event {
     
-    //******** EVENTOS PARA EL ALGORITMO ************
+    //******** EVENTS ************//
     public static final int CALCULATE_MINIMUM_PATH = 001;
     public static final int GET_MINIMUM_PATH = 002;
 }

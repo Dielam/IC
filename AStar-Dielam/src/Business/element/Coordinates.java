@@ -6,7 +6,7 @@
 package Business.element;
 
 /**
- *
+ * Coordinates
  * @author Diego Laguna Martín
  */
 public class Coordinates {

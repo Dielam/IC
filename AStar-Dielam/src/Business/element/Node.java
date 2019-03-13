@@ -8,7 +8,7 @@ package Business.element;
 import java.util.ArrayList;
 
 /**
- *
+ * Node
  * @author Diego Laguna Martín
  */
 public class Node implements Comparable<Node> {
@@ -88,7 +88,7 @@ public class Node implements Comparable<Node> {
     
     /**
      * Set north
-     * @param North 
+     * @param north 
      */
     public void setNorth(Node north) {
         //Replace the old node with the new one in the neighborList
@@ -362,7 +362,7 @@ public class Node implements Comparable<Node> {
      * Set if is an obstacle
      * @param isObstacle 
      */
-    public void setIsObstacle(boolean isObstacle) {
+    public final void setIsObstacle(boolean isObstacle) {
         this.isObstacle = isObstacle;
     }
     

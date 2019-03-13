@@ -8,12 +8,12 @@ package Business.element;
 import java.util.ArrayList;
 
 /**
- *
+ * Path
  * @author Diego Laguna Martín
  */
 public class Path {
     
-    private ArrayList<Node> Path = new ArrayList<Node>();
+    private final ArrayList<Node> Path = new ArrayList<Node>();
     
     /**
      * Get length of the path

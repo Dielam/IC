@@ -6,7 +6,7 @@
 package Business.element;
 
 /**
- *
+ * Chronometer
  * @author Diego Laguna Martín
  */
 public class Chronometer {
@@ -42,7 +42,7 @@ public class Chronometer {
 
     /**
      * Return elapsed time
-     * @returnTiempo elapsedTime
+     * @return elapsedTime
      */
     public long getElapsedTime() {
         long elapsedTime;

@@ -12,15 +12,15 @@ import Business.heuristic.Heuristic;
 import Business.transfer.Transfer;
 
 /**
- *
+ * Controller
  * @author Diego Laguna Martín
  */
 public class Controller {
     
-    private Algorithm path;
-    private Heuristic heuristic;
-    private Map map;
-    private Chronometer chrono;
+    private final Algorithm path;
+    private final Heuristic heuristic;
+    private final Map map;
+    private final Chronometer chrono;
     
     /**
      * Inizialize the controller
@@ -36,8 +36,8 @@ public class Controller {
     
     /**
      * Respond to the event with its corresponding action
-     * @param evento
-     * @param datos
+     * @param event
+     * @param data
      * @return 
      */
     public Object action(int event, Object data) {

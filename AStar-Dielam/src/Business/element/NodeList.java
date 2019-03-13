@@ -14,7 +14,7 @@ import java.util.Collections;
  */
 public class NodeList {
     
-    private ArrayList<Node> list;
+    private final ArrayList<Node> list;
     
     /**
      * Constructor per default

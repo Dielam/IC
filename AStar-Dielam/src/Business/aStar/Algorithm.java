@@ -10,17 +10,17 @@ import Business.element.Map;
 import Business.element.Node;
 import Business.element.NodeList;
 import Business.element.Path;
-import Business.heuristic.HeuristicInterface;
+import Business.heuristic.Heuristic;
 import java.util.ArrayList;
 
 /**
- *
+ * Algorithm
  * @author Diego Laguna Martín
  */
 public class Algorithm {
     
     private Map map;
-    private HeuristicInterface heuristic;
+    private Heuristic heuristic;
     private ArrayList<Node> closeList;
     private NodeList openList;
     private Path minimumPath;
@@ -30,7 +30,7 @@ public class Algorithm {
      * @param map
      * @param heuristic 
      */
-    public Algorithm(Map map, HeuristicInterface heuristic) {
+    public Algorithm(Map map, Heuristic heuristic) {
         this.map = map;
         this.heuristic = heuristic;
         this.closeList = new ArrayList<Node>();
@@ -57,7 +57,7 @@ public class Algorithm {
      * Get heuristic interface
      * @return HeuristicInterface
      */
-    public HeuristicInterface getHeuristic() {
+    public Heuristic getHeuristic() {
         return heuristic;
     }
     
@@ -65,7 +65,7 @@ public class Algorithm {
      * Set heuristic interface
      * @param heuristic 
      */
-    public void setHeuristic(HeuristicInterface heuristic) {
+    public void setHeuristic(Heuristic heuristic) {
         this.heuristic = heuristic;
     }
     
@@ -119,8 +119,8 @@ public class Algorithm {
     
     /**
      * Calculate the minimum path
-     * @param coord_Inicio
-     * @param coord_Fin
+     * @param Initial_coord
+     * @param Final_coord
      * @param obstacleMap
      * @return null
      */
@@ -130,7 +130,6 @@ public class Algorithm {
         this.map.setObstacles(obstacleMap);
         this.closeList = new ArrayList<Node>();
         this.openList = new NodeList();
-
         if (map.getNode(Final_coord.getX(), Final_coord.getY()).isObstacle()) return null;
         
         map.getInitialNode().setDistanceFromStart(0);
@@ -152,8 +151,7 @@ public class Algorithm {
                         openList.add(neighbor);
                         bestNeighbor = true;
                     } 
-                    else if(distanceNeighbor < current.getDistanceFromStart()) bestNeighbor = true;
-                    else bestNeighbor = false;
+                    else bestNeighbor = distanceNeighbor < current.getDistanceFromStart();
                     if (bestNeighbor) {
                         neighbor.setPreviousNode(current);
                         neighbor.setDistanceFromStart(distanceNeighbor);
@@ -163,33 +161,6 @@ public class Algorithm {
             }
         }
         return null;
-    }
-        
-    /**
-     * Draw the path
-     */    
-    public void drawPath() {
-        Node node;
-        for(int x = 0; x < map.getSize(); x++) {
-            if (x == 0) {
-                for (int i = 0; i <= map.getSize(); i++) System.out.print("-");
-                System.out.println();   
-            }
-            System.out.print("|");
-            for(int y = 0; y < map.getHigh(); y++) {
-                node = map.getNode(x, y);
-                if (node.isObstacle()) System.out.print("O");
-                else if (node.isStart) System.out.print("I");
-                else if (node.isGoal) System.out.print("F");
-                else if (minimumPath.contains(node.getX(), node.getY())) System.out.print("*");
-                else System.out.print(" ");
-                if (y == map.getHigh()) System.out.print("_");
-            }
-            System.out.print("|");
-            System.out.println();
-        }
-        for (int i = 0; i <= map.getSize(); i++)
-            System.out.print("-");
     }
     
     /**

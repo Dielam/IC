@@ -1,0 +1,43 @@
+ALGORITMO A ESTRELLA
+Diego Laguna Martín
+
+
+///////MEMORIA///// 
+A estrella es un  algoritmo de busqueda en grafos.
+El algoritmo encontrara siempre el camino de menor coste entre 2 nodos siempre que se cumplan unas condiciones
+determinadas.
+
+	/////IMPLEMENTACION//////
+A partir del nodo inicial, expandimos los adyacentes, calculando el coste y guardando el nodo antecesor desde
+el que son expandidos y añadiendose a una lista donde se acumulan todos los nodos abiertos, a la vez que 
+añadimos el nodo expandido a una lista cerrada.
+Buscamos en la lista de nodos abiertos el nodo con menor coste y lo expandimos, sueguimos así sucesivamente
+hasta que la lista de nodos abiertos se vacie o hasta que llueguemos al nodo destino.
+Recorremos la lista de nodos cerrada realizando una poda, en la cual vemos los antecesores con menor coste, de
+este modo podremos desechar los nodos que hacen el camino minimo mas largo. 
+ 
+
+//////MANUAL DE USUARIO//////
+
+El programa simula el vuelo de un dron de un punto a otro teniendo que esquivar a los alienígenas 
+que encuentre.
+
+	///////EJECUTAR//////
+1. Ejecutar el programa.
+	1.1 En caso de que el jar no se ejecute abrir la consola de comandos y ejecutarlo de forma manual
+	java -jar AStar.jar
+2. La consola pedira la anchura y la altura del tablero. 
+3. Se abrira la interfaz de usuario.
+4. En el input de start introducir la coordenada X y la coordenada Y para la posicion inicial.
+5. En el input de start introducir la coordenada X y la coordenada Y para la posicion de la meta.
+6. Pulsar el boton "Start" y se dibujara el camino mas corto para llegar de la posicion inicial dada a 
+la meta proporcionada.
+7. En caso de querer cambiar la posicion inicial, de la meta y los obstaculos; pulsar el boton de "Reset"
+y volver a empezar.
+
+	/////REDIMENSIONAR/////
+8. En caso de querer redimensionar el tablero; introducir la anchura y la altura del tablero y pulsar el
+boton "Resize". 
+
+	///////REINICIAR/////
+9. Pulsar boton "Reset".

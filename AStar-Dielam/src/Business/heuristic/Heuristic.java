@@ -6,12 +6,12 @@
 package Business.heuristic;
 
 /**
- *
+ * Heuristic
+ * Calculate the distance to the goal
  * @author Diego Laguna Martín
  */
-public class Heuristic implements HeuristicInterface{
+public class Heuristic{
 
-    @Override
     public float DistanceToGoal(int startX, int startY, int goalX, int goalY) {
         //Distance in the x
         float x = goalX - startX;

@@ -6,6 +6,7 @@
 package View.views;
 
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 /**
@@ -35,7 +36,7 @@ public class Cell extends JButton {
      * Set column
      * @param column 
      */
-    public void setColumna(int column) {
+    public void setColumn(int column) {
         this.column = column;
     }
     
@@ -59,24 +60,23 @@ public class Cell extends JButton {
      * Set color of the goal cells
      */
     public void setGoalColor() {
-        //ImageIcon imgMeta= new ImageIcon(this.getClass().getResource("/images/meta.png"));
-        //this.setIcon(imgMeta);
-        this.setBackground(Color.BLUE);
+        ImageIcon img= new ImageIcon(this.getClass().getResource("/Images/goal.png"));
+        this.setIcon(img);
     }
     
     /**
      * Set color of the empty cells
      */
     public void setEmptyColor(){
-        this.setBackground(Color.GRAY);
+        this.setBackground(Color.CYAN);
     }
     
     /**
      * Set color of the starts cells
      */
     public void setStartColor(){
-        //ImageIcon imgMeta= new ImageIcon(this.getClass().getResource("/images/meta.png"));
-        //this.setIcon(imgMeta);
+        ImageIcon img= new ImageIcon(this.getClass().getResource("/Images/start.png"));
+        this.setIcon(img);
         this.setBackground(Color.GREEN);
     }
     
@@ -84,15 +84,15 @@ public class Cell extends JButton {
      * Set color of the path cells
      */
     public void setPathColor(){
-        setBackground(Color.DARK_GRAY);
+        setBackground(Color.GREEN);
     }
     
     /**
      * Set color of the obstacles cells
      */
     public void setObstacleColor(){
-        //ImageIcon imgMeta= new ImageIcon(this.getClass().getResource("/images/meta.png"));
-        //this.setIcon(imgMeta);
+        ImageIcon img= new ImageIcon(this.getClass().getResource("/Images/obstacle.png"));
+        this.setIcon(img);
         this.setBackground(Color.RED);
     }
 }

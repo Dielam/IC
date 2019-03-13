@@ -8,7 +8,7 @@ package Business.element;
 import java.util.ArrayList;
 
 /**
- *
+ * Map
  * @author Diego Laguna Martín
  */
 public class Map {
@@ -209,10 +209,10 @@ public class Map {
      * @param y 
      */
     public void setFinalNode(int x, int y) {
-        this.map.get(this.InitialX).get(this.InitialY).setGoal(false);
+        this.map.get(this.FinalX).get(this.FinalY).setGoal(false);
         this.map.get(x).get(y).setGoal(true);
-        this.InitialX = x;
-        this.InitialY = y;
+        this.FinalX = x;
+        this.FinalY = y;
     }
     
     /**

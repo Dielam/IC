@@ -8,7 +8,7 @@ package Business.transfer;
 import Business.element.Coordinates;
 
 /**
- *
+ * Transfer
  * @author Diego Laguna Martín
  */
 public class Transfer {
