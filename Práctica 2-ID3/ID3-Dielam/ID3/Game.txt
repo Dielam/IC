@@ -1,0 +1,15 @@
+sunny,warm,high,false,no
+sunny,warm,high,true,no
+cloudy,warm,high,false,yes
+rainy,tempered,high,false,yes
+rainy,cold,normal,false,yes
+rainy,cold,normal,true,no
+cloudy,cold,normal,true,yes
+sunny,tempered,high,false,no
+sunny,cold,high,false,yes
+rainy,tempered,normal,false,yes
+sunny,tempered,normal,true,yes
+cloudy,tempered,high,true,yes
+cloudy,warm,normal,false,yes
+rainy,tempered,high,true,no
+
